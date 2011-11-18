@@ -9,3 +9,6 @@ echo "Installing Chef"
 gem install rdoc chef ohai --no-ri --no-rdoc --source http://gems.opscode.com --source http://gems.rubyforge.org
 mkdir -p /tmp/chef
 curl -L https://raw.github.com/highgroove/bootstrap/solo.rb -o /tmp/chef/solo.rb
+
+echo "Running Chef"
+chef-solo -c /tmp/chef/solo.rb
