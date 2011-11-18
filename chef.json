@@ -1,6 +1,7 @@
 {
   "recipes":
     [
-      "homebrew"
+      "homebrew",
+      "git"
     ]
 }
