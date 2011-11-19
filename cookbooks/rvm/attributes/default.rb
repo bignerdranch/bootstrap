@@ -1,0 +1,1 @@
+default[:rvm][:rubies] = ["1.9.3"]
