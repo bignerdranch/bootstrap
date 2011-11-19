@@ -13,8 +13,5 @@ curl -L https://github.com/highgroove/bootstrap/tarball/master -o /tmp/chef.tar.
 mkdir -p /tmp/chef
 tar xvfz /tmp/chef.tar.gz -C /tmp/chef --strip-components 1
 
-echo "prepare for homebrew install"
-sudo chown -R `whoami`:staff /usr/local
-
 echo "run chef-solo"
 chef-solo -c /tmp/chef/solo.rb
