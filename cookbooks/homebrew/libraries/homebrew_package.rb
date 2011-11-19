@@ -38,7 +38,8 @@ class Chef
         protected
         def brew(*args)
           run_command_with_systems_locale(
-            :command => "brew #{args.join(' ')}"
+            :command => "brew #{args.join(' ')}",
+            :user => ENV['SUDO_USER']
           )
         end
 
