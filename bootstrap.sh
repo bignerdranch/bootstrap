@@ -7,8 +7,11 @@ curl -L https://github.com/downloads/kennethreitz/osx-gcc-installer/$gcc -o /tmp
 
 echo "install chef"
 gem install rdoc chef ohai --no-ri --no-rdoc --source http://gems.opscode.com --source http://gems.rubyforge.org
+
+echo "download configuration and cookbooks"
+curl -L https://github.com/highgroove/bootstrap/tarball/master -o /tmp/chef.tar.gz
 mkdir -p /tmp/chef
-curl -L https://raw.github.com/highgroove/bootstrap/solo.rb -o /tmp/chef/solo.rb
+tar xvfz /tmp/chef.tar.gz -C /tmp/chef --strip-components 1
 
 echo "prepare for homebrew install"
 sudo chown -R `whoami`:staff /usr/local
