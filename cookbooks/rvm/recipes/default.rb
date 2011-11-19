@@ -1,7 +1,7 @@
 include_recipe 'git'
 
-execute "install rvm" do
-  command 'bash < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer )'
+bash "install rvm" do
+  code 'bash < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer )'
   user ENV["SUDO_USER"]
   group "staff"
   not_if "which rvm"
