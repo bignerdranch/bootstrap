@@ -15,3 +15,6 @@ tar xvfz /tmp/chef.tar.gz -C /tmp/chef --strip-components 1
 
 echo "run chef-solo"
 chef-solo -c /tmp/chef/solo.rb
+
+echo "remove chef"
+rm -rf /tmp/chef
