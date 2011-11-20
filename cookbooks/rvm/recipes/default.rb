@@ -12,8 +12,8 @@ bash "install rvm" do
 end
 
 node[:rvm][:rubies].each do |ruby|
-  execute "install ruby #{ruby}" do
-    command "rvm install #{ruby}"
+  bash "install ruby #{ruby}" do
+    code "rvm install #{ruby}"
     user ENV["SUDO_USER"]
     group "staff"
   end
