@@ -6,7 +6,7 @@ curl -L https://github.com/downloads/kennethreitz/osx-gcc-installer/$gcc -o /tmp
 /usr/sbin/installer -pkg /tmp/$gcc -target /
 
 echo "install chef"
-gem install rdoc chef ohai --no-ri --no-rdoc --source http://gems.opscode.com --source http://gems.rubyforge.org
+gem install rdoc chef ohai --no-ri --no-rdoc
 
 echo "download configuration and cookbooks"
 curl -L https://github.com/highgroove/bootstrap/tarball/master -o /tmp/chef.tar.gz
