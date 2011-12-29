@@ -3,6 +3,7 @@
     [
       "homebrew",
       "git",
-      "rvm"
+      "rvm",
+      "postgresql"
     ]
 }
